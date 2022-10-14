@@ -10,4 +10,3 @@ int mult = a;
 for (int i = 1; i < b; i ++) 
     mult = mult*a;
     Console.WriteLine($"Число {a} в степени {b} равно {multy}");
-
