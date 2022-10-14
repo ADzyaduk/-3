@@ -2,7 +2,7 @@
 //Задача 19. Напишите программу, которая принимает на вход пятизначное число и проверяет, является ли оно палиндромом.
 
 
-internal class Program
+internal class NewBaseType
 {
     private static void Main(string[] args)
     {
