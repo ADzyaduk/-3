@@ -9,6 +9,7 @@ int Getmult(int a, int b)
     }
     return mult;
 }
+Console.Clear();
 Console.Write ("Введите A: ");
 int a = int.Parse (Console.ReadLine ()!);
 Console.Write ("Введите B: ");
