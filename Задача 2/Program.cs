@@ -21,5 +21,5 @@ void ChangeArray(int[] array)
 Console.Clear();
 int[] array = GetArray(6, -10, 10);
 Console.WriteLine(String.Join(", ", array));
-ChangeArray();
+ChangeArray(array);
 Console.WriteLine(String.Join(", ", array));
