@@ -32,8 +32,8 @@ int[] ResultArray(int[] array)
     }
     if (array.Length % 2 != 0)
     {
-        result[size-1] = array[array.Length/2];
-    } 
+        result[size - 1] = array[array.Length / 2];
+    }
     return result;
 }
 
@@ -42,6 +42,6 @@ Console.WriteLine("Введите массив через пробел: ");
 string input = Console.ReadLine();
 int[] numArray = GetArrayFromString(input);
 
-int[] newArray = ResultArray (numArray);
+int[] newArray = ResultArray(numArray);
 
 Console.WriteLine(String.Join(", ", newArray));
