@@ -31,5 +31,4 @@ Console.Clear();
 int[] array = GetArray(8, 100, 1000);
 Console.WriteLine(String.Join(", ", array));
 Console.WriteLine();
-Even(array);
-Console.Write($"{Even(array)}");
+Console.Write($"Колличество четных чиссел = {Even(array)}");
