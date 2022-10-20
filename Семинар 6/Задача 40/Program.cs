@@ -6,8 +6,24 @@
 
 
 
-Console.Clear();
-System.Console.WriteLine("введите три числа ");
-int x = int.Parse(Console.ReadLine()!);
-int y = int.Parse(Console.ReadLine()!);
-int z = int.Parse(Console.ReadLine()!);
+
+bool IsTriungle (int a, int b, int c)
+{
+return a + b > c && a + c > b && b + c > a;
+}
+
+int[] array = new int[3];
+
+for (int i = 0; i < 3; i++)
+{
+array[i] = int.Parse(Console.ReadLine()!);
+}
+
+if (IsTriungle(array[0], array[1], array[2]))
+{
+Console.WriteLine("Существует");
+}
+else
+{
+Console.WriteLine("Не существует");
+}
