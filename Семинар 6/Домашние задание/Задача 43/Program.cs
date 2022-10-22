@@ -4,7 +4,7 @@
 // b1 = 2, k1 = 5, b2 = 4, k2 = 9 -> (-0,5; -0,5)
 
 Console.Clear();
-Console.WriteLine("This program finds the point of intersection of lines: у=k1*х + b1 and y=k2*x + b2.");
+Console.WriteLine("у=k1*х + b1 and y=k2*x + b2.");
 EnterCoeff("k1");
 double k1=Convert.ToDouble(Console.ReadLine());
 EnterCoeff("b1");
@@ -18,23 +18,23 @@ FindCoordinates(k1,k2,b1,b2);
 
 void FindCoordinates(double k1, double k2, double b1, double b2)
 {
-  double [] coord = new double [2]; // coord[0]=x; coord[1]=y 
+  double [] coord = new double [2]; 
   
   if (k1==k2 && b1==b2)
     {
-        Console.WriteLine("The lines match. You've entered the same coefficients for both lines.");
+        Console.WriteLine("");
         return;
     } 
   else if (k1==k2)
     {
-        Console.WriteLine("The lines are parallel.");
+        Console.WriteLine("Прямые паралельны");
         return;
     }
   else
    {
        coord[0] = (b2-b1)/(k1-k2);
        coord[1] = k1*coord[0] + b1;
-       Console.WriteLine($"The point of intersection of lines: у={k1}*х + {b1} and y={k2}*x + {b2} equal to [{coord[0]} ; {coord[1]}].");
+       Console.WriteLine($" у={k1}*х + {b1} and y={k2}*x + {b2} equal to [{coord[0]} ; {coord[1]}].");
    }
   
 } 
