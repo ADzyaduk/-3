@@ -19,15 +19,21 @@ int[,] GetArray(int m, int n, int minValue, int maxValue)
     return result;
 }
 
-int FindIndex(int[,] inArray)
+void FindIndex(int[,] inArray, int number)
 {
     for (int i = 0; i < inArray.GetLength(0); i++)
     {
-        for (int j = 0; j < inArray.GetLength(1); j++);
-        
+        for (int j = 0; j < inArray.GetLength(1); j++)
+        {
+            if (inArray[i, j] == number)
+            {
+                Console.WriteLine($"Индекс числа {number}: i = {i}  j = {j}\t ");
+                return;
+            }
+        }
     }
+    System.Console.WriteLine("Число отвутствует в массиве.");
 }
-
 void PrintArray(int[,] inArray)
 {
     for (int i = 0; i < inArray.GetLength(0); i++)
@@ -45,6 +51,9 @@ Console.Write("Введите количество строк в массиве:
 int row = int.Parse(Console.ReadLine()!);
 Console.Write("Введите количество столбцов в массиве: ");
 int columns = int.Parse(Console.ReadLine()!);
+Console.Write("Что ищем? ");
+int number = int.Parse(Console.ReadLine()!);
 
 int[,] array = GetArray(row, columns, 0, 10);
 PrintArray(array);
+FindIndex(array, number);
